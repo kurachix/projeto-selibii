@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>André Neves — Blog de Autor</title>
+  <style>
+    :root{--accent:#1f6feb;--muted:#666;--bg:#f7f7f8;--card:#fff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
+    header{background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.15)), url('https://via.placeholder.com/1600x600?text=Andr%C3%A9+Neves') center/cover no-repeat; color:#fff; padding:6rem 1rem}
+    .container{max-width:1000px;margin:0 auto}
+    header .hero{display:flex;gap:2rem;align-items:center}
+    header h1{margin:0;font-size:2.2rem}
+    header p.lead{margin:.6rem 0 0;font-size:1.05rem;opacity:.95}
+    nav{display:flex;gap:1rem;justify-content:flex-end}
+    nav a{color:rgba(255,255,255,.95);text-decoration:none;padding:.35rem .6rem;border-radius:6px}
+    main{padding:2rem 1rem}
+    .card{background:var(--card);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;box-shadow:0 6px 18px rgba(20,20,50,.06)}
+    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:1rem}
+    h2{margin-top:0}
+    .meta{color:var(--muted);font-size:.95rem}
+    ul.clean{padding-left:1rem}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem}
+    footer{padding:1.25rem;text-align:center;color:var(--muted);font-size:.95rem}
+    @media (max-width:800px){.two-col{grid-template-columns:1fr}header{padding:3.5rem 1rem}header h1{font-size:1.6rem}}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:8px;text-decoration:none}
+    .book{display:flex;gap:.75rem;align-items:flex-start}
+    .book img{width:86px;height:120px;object-fit:cover;border-radius:6px}
+    .small{font-size:.92rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Navegação principal">
+        <a href="#bio">Biografia</a>
+        <a href="#obras">Obras</a>
+        <a href="#premios">Prêmios</a>
+        <a href="#entrevistas">Entrevistas</a>
+      </nav>
+      <div class="hero">
+        <div>
+          <h1>André Neves</h1>
+          <p class="lead">Escritor, ilustrador e arte-educador brasileiro dedicado à literatura infantil e à formação de leitores. Este blog reúne biografia, obras, prêmios, entrevistas e recursos para professores.</p>
+          <p class="meta">Blog criado como uma página-resumo informativa — imagens e capas são ilustrativas.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="bio" class="card">
+      <h2>Biografia</h2>
+      <p class="small">André Neves nasceu em Recife (PE) e atualmente vive em Porto Alegre (RS). Formado em Relações Públicas e em Artes Plásticas, iniciou estudos em artes visuais em meados da década de 1990 e consolidou carreira como autor e ilustrador de livros infantis.</p>
+      <p>Trabalha combinando imagem e palavra: escreve textos para crianças e também ilustra suas obras e livros de outros autores. Atua como arte-educador, ministrando oficinas e palestras sobre leitura e ilustração no Brasil e em festivais internacionais.</p>
+      <div class="two-col" style="margin-top:1rem">
+        <div>
+          <h3>Dados rápidos</h3>
+          <ul class="clean">
+            <li><strong>Local de nascimento:</strong> Recife, Pernambuco</li>
+            <li><strong>Residência:</strong> Porto Alegre, Rio Grande do Sul</li>
+            <li><strong>Áreas:</strong> Literatura infantil, ilustração, arte-educação</li>
+            <li><strong>Primeiros passos:</strong> ilustração e trabalho com editoras desde os anos 1990</li>
+          </ul>
+        </div>
+        <aside class="card" style="padding:.8rem">
+          <h4>Oficinas e formação</h4>
+          <p class="small">Participa como docente em cursos de ilustração (por exemplo, experiências em Sarmede/Itália) e é convidado frequente em festivais literários.</p>
+          <a class="btn" href="#obras">Ver obras</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="obras" class="card">
+      <h2>Obras selecionadas</h2>
+      <p class="small">André Neves tem dezenas de livros publicados — tanto como autor e ilustrador quanto como ilustrador de textos de terceiros. Abaixo uma seleção representativa.</p>
+
+      <article class="book">
+        <img src="https://via.placeholder.com/200x280?text=Obax" alt="Capa do livro Obax">
+        <div>
+          <h3>Obax</h3>
+          <p class="small">Uma obra que mistura memórias, imagens e tradição — exemplo de sua pesquisa sobre cultura regional e técnicas mistas de ilustração.</p>
+        </div>
+      </article>
+
+      <article class="book" style="margin-top:.8rem">
+        <img src="https://via.placeholder.com/200x280?text=Lino" alt="Capa do livro Lino">
+        <div>
+          <h3>Lino</h3>
+          <p class="small">Livro ilustrado que evidencia o trabalho gráfico com colagens e texturas, reconhecido por público e crítica.</p>
+        </div>
+      </article>
+
+      <article class="book" style="margin-top:.8rem">
+        <img src="https://via.placeholder.com/200x280?text=Sebastiana+e+Severina" alt="Capa do livro Sebastiana e Severina">
+        <div>
+          <h3>Sebastiana e Severina</h3>
+          <p class="small">História inspirada em cultura popular nordestina; ilustrações com rendas e colagens. Recebeu destaque em eventos literários.</p>
+        </div>
+      </article>
+
+      <p style="margin-top:1rem" class="small">Para uma bibliografia completa procure editoras e livrarias especializadas — este blog traz uma seleção inicial para leitura e uso em sala de aula.</p>
+    </section>
+
+    <section id="premios" class="card">
+      <h2>Prêmios e reconhecimento</h2>
+      <p class="small">Ao longo da carreira, André Neves recebeu prêmios relevantes na literatura infantil e ilustração, incluindo menções e troféus em premiações nacionais (como o Jabuti) e prêmios estaduais.</p>
+      <ul>
+        <li>Prêmio Jabuti — menção e premiações em categorias relacionadas a livros infantis e ilustração.</li>
+        <li>Prêmio Luís Jardim de Melhor Livro de Imagem (citação em publicações).</li>
+        <li>Troféu Monteiro Lobato e prêmios regionais (Açorianos, entre outros).</li>
+      </ul>
+    </section>
+
+    <section id="entrevistas" class="card">
+      <h2>Entrevistas & Apresentações</h2>
+      <p class="small">André é presença habitual em mesas, lives e seminários. Em vários eventos ele comenta sobre processos de criação, colaboração com editores e a importância da imagem na formação do leitor.</p>
+      <ul>
+        <li>Lives e seminários sobre literatura infantil em fundações culturais.</li>
+        <li>Colaborações com escolas, bibliotecas e projetos educativos.</li>
+      </ul>
+    </section>
+
+    <section id="galeria" class="card">
+      <h2>Galeria (amostras)</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+1" alt="Ilustração 1">
+        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+2" alt="Ilustração 2">
+        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+3" alt="Ilustração 3">
+        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+4" alt="Ilustração 4">
+      </div>
+      <p class="small" style="margin-top:.6rem">Observação: as imagens aqui são apenas exemplos — para uso público consulte as editoras ou a página oficial do autor para obter arquivos de alta resolução e permissões.</p>
+    </section>
+
+    <section id="recursos" class="card">
+      <h2>Recursos para professores e mediadores</h2>
+      <p class="small">Sugestões práticas para trabalhar os livros de André Neves em sala de aula:</p>
+      <ol>
+        <li>Atividade de leitura compartilhada seguida de criação de ilustrações a partir de trechos do texto.</li>
+        <li>Oficina de colagem e técnicas mistas inspiradas nas capas e páginas do autor.</li>
+        <li>Pesquisa de referências culturais presentes nas narrativas (ex.: elementos do Nordeste brasileiro).</li>
+        <li>Projetos interdisciplinares que cruzem arte, história local e produção textual.</li>
+      </ol>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>Contato e referências</h2>
+      <p class="small">Este blog é um resumo informativo. Para informações oficiais sobre calendário de lançamentos, oficinas e materiais, consulte as editoras e o perfil oficial do autor.</p>
+      <p class="small">Links úteis: perfil do autor em redes sociais, editoras que publicaram suas obras e catálogos de bibliotecas.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container small">Criação: página modelo — conteúdo baseado em fontes públicas sobre André Neves. Atualize imagens/capas com arquivos oficiais ao publicar.</div>
+  </footer>
+</body>
+</html>
