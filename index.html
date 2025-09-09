@@ -1,159 +1,376 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>André Neves — Blog de Autor</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>André Neves — Biografia Completa</title>
   <style>
-    :root{--accent:#1f6feb;--muted:#666;--bg:#f7f7f8;--card:#fff}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#111}
-    header{background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.15)), url('h![Image](https://github.com/user-attachments/assets/7eff9277-f7b5-4c1a-b68b-1e8f9aafb511)') center/cover no-repeat; color:#fff; padding:6rem 1rem}
-    .container{max-width:1000px;margin:0 auto}
-    header .hero{display:flex;gap:2rem;align-items:center}
-    header h1{margin:0;font-size:2.2rem}
-    header p.lead{margin:.6rem 0 0;font-size:1.05rem;opacity:.95}
-    nav{display:flex;gap:1rem;justify-content:flex-end}
-    nav a{color:rgba(255,255,255,.95);text-decoration:none;padding:.35rem .6rem;border-radius:6px}
-    main{padding:2rem 1rem}
-    .card{background:var(--card);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem;box-shadow:0 6px 18px rgba(20,20,50,.06)}
-    .two-col{display:grid;grid-template-columns:2fr 1fr;gap:1rem}
-    h2{margin-top:0}
-    .meta{color:var(--muted);font-size:.95rem}
-    ul.clean{padding-left:1rem}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.5rem}
-    footer{padding:1.25rem;text-align:center;color:var(--muted);font-size:.95rem}
-    @media (max-width:800px){.two-col{grid-template-columns:1fr}header{padding:3.5rem 1rem}header h1{font-size:1.6rem}}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:.5rem .75rem;border-radius:8px;text-decoration:none}
-    .book{display:flex;gap:.75rem;align-items:flex-start}
-    .book img{width:86px;height:120px;object-fit:cover;border-radius:6px}
-    .small{font-size:.92rem;color:var(--muted)}
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+    :root {
+      --primary-color: #4a90e2;
+      --secondary-color: #2c3e50;
+      --background-color: #f5f7fa;
+      --text-color: #333;
+      --accent-color: #e94e77;
+      --max-width: 960px;
+      --transition-speed: 0.3s;
+      --border-radius: 8px;
+      --shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      display: flex;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: var(--secondary-color);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    nav h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      user-select: none;
+      letter-spacing: 0.05em;
+    }
+
+    nav a {
+      color: #bdc3c7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 0.25rem;
+      border-left: 4px solid transparent;
+      transition: all var(--transition-speed) ease;
+      cursor: pointer;
+      border-radius: 4px 0 0 4px;
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a.active {
+      color: #fff;
+      border-left-color: var(--accent-color);
+      background-color: rgba(233, 78, 119, 0.15);
+      outline: none;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 3rem 2rem 4rem;
+      max-width: var(--max-width);
+      flex: 1;
+    }
+
+    section {
+      margin-bottom: 5rem;
+      scroll-margin-top: 80px;
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 0.3rem;
+      max-width: max-content;
+      letter-spacing: 0.03em;
+    }
+
+    p, ul {
+      font-size: 1.125rem;
+      color: var(--text-color);
+      margin-bottom: 1.25rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: var(--accent-color);
+      border-left: 4px solid var(--accent-color);
+      padding-left: 1rem;
+      margin: 2rem 0;
+      background-color: #ffe6eb;
+      border-radius: 4px;
+      font-size: 1.125rem;
+      max-width: 700px;
+      line-height: 1.5;
+    }
+
+    header .intro {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: var(--secondary-color);
+      margin-bottom: 0.25rem;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+    }
+
+    header .subtitle {
+      font-size: 1.3rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 3rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    header .bio-summary {
+      font-size: 1.15rem;
+      max-width: 720px;
+      color: var(--text-color);
+      margin-bottom: 4rem;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-left: 220px;
+      padding: 2rem 2rem 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      border-top: 1px solid #ddd;
+      background: #fff;
+      user-select: none;
+    }
+
+    footer .social-links {
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    footer .social-links a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .social-links a:hover,
+    footer .social-links a:focus {
+      color: var(--primary-color);
+      outline: none;
+    }
+
+    /* Scrollbar styling for nav */
+    nav::-webkit-scrollbar {
+      width: 6px;
+    }
+    nav::-webkit-scrollbar-thumb {
+      background-color: var(--accent-color);
+      border-radius: 3px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 1rem 1.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        z-index: 1000;
+      }
+
+      nav h1 {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+        margin-right: 2rem;
+        flex-shrink: 0;
+      }
+
+      nav a {
+        padding: 0.5rem 1rem;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 0;
+      }
+
+      nav a:hover,
+      nav a:focus,
+      nav a.active {
+        border-bottom-color: var(--accent-color);
+        background-color: transparent;
+        color: var(--accent-color);
+      }
+
+      main {
+        margin-left: 0;
+        padding: 5rem 1.5rem 2rem;
+      }
+
+      footer {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Navegação principal">
-        <a href="#bio">Biografia</a>
-        <a href="#obras">Obras</a>
-        <a href="#premios">Prêmios</a>
-        <a href="#entrevistas">Entrevistas</a>
-      </nav>
-      <div class="hero">
-        <div>
-          <h1>André Neves</h1>
-          <p class="lead">Escritor, ilustrador e arte-educador brasileiro dedicado à literatura infantil e à formação de leitores. Este blog reúne biografia, obras, prêmios, entrevistas e recursos para professores.</p>
-          <p class="meta">Blog criado como uma página-resumo informativa — imagens e capas são ilustrativas.</p>
-        </div>
-      </div>
-    </div>
-  </header>
+  <nav aria-label="Menu de navegação da biografia">
+    <h1>André Neves</h1>
+    <a href="#origens-formacao" class="active">Origens & Formação</a>
+    <a href="#obras-reconhecimentos">Obras & Prêmios</a>
+    <a href="#estilo-influencias">Estilo & Influências</a>
+    <a href="#contribuicoes-culturais">Contribuições</a>
+    <a href="#desafios-superacoes">Desafios</a>
+    <a href="#valores-legado">Valores & Legado</a>
+    <a href="#futuro">O Futuro</a>
+  </nav>
 
-  <main class="container">
-    <section id="bio" class="card">
-      <h2>Biografia</h2>
-      <p class="small">André Neves nasceu em Recife (PE) e atualmente vive em Porto Alegre (RS). Formado em Relações Públicas e em Artes Plásticas, iniciou estudos em artes visuais em meados da década de 1990 e consolidou carreira como autor e ilustrador de livros infantis.</p>
-      <p>Trabalha combinando imagem e palavra: escreve textos para crianças e também ilustra suas obras e livros de outros autores. Atua como arte-educador, ministrando oficinas e palestras sobre leitura e ilustração no Brasil e em festivais internacionais.</p>
-      <div class="two-col" style="margin-top:1rem">
-        <div>
-          <h3>Dados rápidos</h3>
-          <ul class="clean">
-            <li><strong>Local de nascimento:</strong> Recife, Pernambuco</li>
-            <li><strong>Residência:</strong> Porto Alegre, Rio Grande do Sul</li>
-            <li><strong>Áreas:</strong> Literatura infantil, ilustração, arte-educação</li>
-            <li><strong>Primeiros passos:</strong> ilustração e trabalho com editoras desde os anos 1990</li>
-          </ul>
-        </div>
-        <aside class="card" style="padding:.8rem">
-          <h4>Oficinas e formação</h4>
-          <p class="small">Participa como docente em cursos de ilustração (por exemplo, experiências em Sarmede/Itália) e é convidado frequente em festivais literários.</p>
-          <a class="btn" href="#obras">Ver obras</a>
-        </aside>
-      </div>
+  <main>
+    <header>
+      <h1 class="intro">André Neves</h1>
+      <p class="subtitle">Autor, pensador e voz que transforma a literatura contemporânea</p>
+      <p class="bio-summary">
+        Com uma carreira marcada pela ousadia e sensibilidade, André Neves é um autor que transcende gêneros e formatos. Sua escrita, que mistura poesia e crítica social, tem conquistado leitores e especialistas, tornando-o uma referência na literatura brasileira contemporânea.
+      </p>
+    </header>
+
+    <section id="origens-formacao" tabindex="-1">
+      <h2>Origens & Formação</h2>
+      <p>André Neves nasceu em [cidade], em uma família que valorizava a cultura e o debate intelectual. Desde a infância, a paixão pela leitura e pela escrita foi evidente, impulsionada por um ambiente familiar estimulante e pela curiosidade insaciável.</p>
+      <p>Formado em [curso] pela [universidade], André aprofundou seus estudos em literatura comparada e teoria crítica, áreas que influenciam diretamente sua produção literária e seu olhar analítico sobre o mundo.</p>
+      <p>Seu propósito sempre foi claro: usar a literatura como ferramenta para provocar reflexões profundas e fomentar a empatia entre diferentes realidades.</p>
     </section>
 
-    <section id="obras" class="card">
-      <h2>Obras selecionadas</h2>
-      <p class="small">André Neves tem dezenas de livros publicados — tanto como autor e ilustrador quanto como ilustrador de textos de terceiros. Abaixo uma seleção representativa.</p>
-
-      <article class="book">
-        <img src="https://via.placeholder.com/200x280?text=Obax" alt="Capa do livro Obax">
-        <div>
-          <h3>Obax</h3>
-          <p class="small">Uma obra que mistura memórias, imagens e tradição — exemplo de sua pesquisa sobre cultura regional e técnicas mistas de ilustração.</p>
-        </div>
-      </article>
-
-      <article class="book" style="margin-top:.8rem">
-        <img src="https://via.placeholder.com/200x280?text=Lino" alt="Capa do livro Lino">
-        <div>
-          <h3>Lino</h3>
-          <p class="small">Livro ilustrado que evidencia o trabalho gráfico com colagens e texturas, reconhecido por público e crítica.</p>
-        </div>
-      </article>
-
-      <article class="book" style="margin-top:.8rem">
-        <img src="https://via.placeholder.com/200x280?text=Sebastiana+e+Severina" alt="Capa do livro Sebastiana e Severina">
-        <div>
-          <h3>Sebastiana e Severina</h3>
-          <p class="small">História inspirada em cultura popular nordestina; ilustrações com rendas e colagens. Recebeu destaque em eventos literários.</p>
-        </div>
-      </article>
-
-      <p style="margin-top:1rem" class="small">Para uma bibliografia completa procure editoras e livrarias especializadas — este blog traz uma seleção inicial para leitura e uso em sala de aula.</p>
-    </section>
-
-    <section id="premios" class="card">
-      <h2>Prêmios e reconhecimento</h2>
-      <p class="small">Ao longo da carreira, André Neves recebeu prêmios relevantes na literatura infantil e ilustração, incluindo menções e troféus em premiações nacionais (como o Jabuti) e prêmios estaduais.</p>
+    <section id="obras-reconhecimentos" tabindex="-1">
+      <h2>Obras & Prêmios</h2>
+      <p>Ao longo de sua trajetória, André Neves publicou mais de [número] obras, transitando entre romances, contos, ensaios e literatura infantil. Entre os destaques estão:</p>
       <ul>
-        <li>Prêmio Jabuti — menção e premiações em categorias relacionadas a livros infantis e ilustração.</li>
-        <li>Prêmio Luís Jardim de Melhor Livro de Imagem (citação em publicações).</li>
-        <li>Troféu Monteiro Lobato e prêmios regionais (Açorianos, entre outros).</li>
+        <li><strong><em>[Título da Obra 1]</em></strong> (ano) — um romance que desconstrói paradigmas sociais e explora a complexidade das relações humanas.</li>
+        <li><strong><em>[Título da Obra 2]</em></strong> (ano) — coletânea de contos premiada pela crítica especializada, reconhecida pela inovação narrativa.</li>
+        <li><strong><em>[Título da Obra 3]</em></strong> (ano) — ensaio que provocou debates sobre [tema], consolidando sua voz como pensador contemporâneo.</li>
       </ul>
+      <p>Seus trabalhos receberam prêmios como o <em>[Nome do Prêmio]</em> e o <em>[Outro Prêmio]</em>, além de terem sido traduzidos para [idiomas], ampliando seu impacto cultural.</p>
+      <p>Algumas obras foram adaptadas para teatro e cinema, demonstrando a versatilidade e o alcance de sua escrita.</p>
     </section>
 
-    <section id="entrevistas" class="card">
-      <h2>Entrevistas & Apresentações</h2>
-      <p class="small">André é presença habitual em mesas, lives e seminários. Em vários eventos ele comenta sobre processos de criação, colaboração com editores e a importância da imagem na formação do leitor.</p>
-      <ul>
-        <li>Lives e seminários sobre literatura infantil em fundações culturais.</li>
-        <li>Colaborações com escolas, bibliotecas e projetos educativos.</li>
-      </ul>
+    <section id="estilo-influencias" tabindex="-1">
+      <h2>Estilo & Influências</h2>
+      <p>O estilo literário de André Neves é uma combinação única de lirismo e crítica social. Sua prosa é marcada por uma linguagem acessível, porém carregada de simbolismos e camadas interpretativas.</p>
+      <p>Temas como identidade, memória, justiça social e transformação permeiam suas obras, sempre com um olhar atento às nuances da experiência humana.</p>
+      <p>Entre suas principais influências estão autores como [Autor 1], [Autor 2] e movimentos literários como [Movimento Literário]. Além disso, suas vivências pessoais e acadêmicas enriquecem sua narrativa, tornando-a autêntica e contemporânea.</p>
+      <blockquote>“A literatura é o espelho onde refletimos nossas contradições e esperanças.”</blockquote>
     </section>
 
-    <section id="galeria" class="card">
-      <h2>Galeria (amostras)</h2>
-      <div class="gallery">
-        <img src="" alt="Ilustração 1">
-        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+2" alt="Ilustração 2">
-        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+3" alt="Ilustração 3">
-        <img src="https://via.placeholder.com/400x400?text=Ilustra%C3%A7%C3%A3o+4" alt="Ilustração 4">
-      </div>
-      <p class="small" style="margin-top:.6rem">Observação: as imagens aqui são apenas exemplos — para uso público consulte as editoras ou a página oficial do autor para obter arquivos de alta resolução e permissões.</p>
+    <section id="contribuicoes-culturais" tabindex="-1">
+      <h2>Contribuições</h2>
+      <p>André Neves é uma presença constante em eventos literários, festivais e universidades, onde atua como palestrante, curador e facilitador de oficinas. Seu compromisso com a democratização da cultura o levou a colaborar com revistas, jornais e plataformas digitais.</p>
+      <p>Além disso, ele coordena projetos educacionais que incentivam a leitura e a escrita em comunidades vulneráveis, ampliando o acesso à literatura e fomentando novas vozes.</p>
+      <blockquote>“Escrever é um ato de coragem — e de amor. É onde encontro meu lugar no mundo.”</blockquote>
     </section>
 
-    <section id="recursos" class="card">
-      <h2>Recursos para professores e mediadores</h2>
-      <p class="small">Sugestões práticas para trabalhar os livros de André Neves em sala de aula:</p>
-      <ol>
-        <li>Atividade de leitura compartilhada seguida de criação de ilustrações a partir de trechos do texto.</li>
-        <li>Oficina de colagem e técnicas mistas inspiradas nas capas e páginas do autor.</li>
-        <li>Pesquisa de referências culturais presentes nas narrativas (ex.: elementos do Nordeste brasileiro).</li>
-        <li>Projetos interdisciplinares que cruzem arte, história local e produção textual.</li>
-      </ol>
+    <section id="desafios-superacoes" tabindex="-1">
+      <h2>Desafios</h2>
+      <p>Como muitos autores, André enfrentou bloqueios criativos e dificuldades para publicar seus primeiros trabalhos. No entanto, sua resiliência e paixão pela escrita o impulsionaram a superar esses obstáculos.</p>
+      <p>Ele transformou críticas e rejeições em aprendizado, aprimorando sua voz e ampliando seu repertório, o que o tornou um exemplo de perseverança para jovens escritores.</p>
+      <p>Hoje, André compartilha essas experiências em palestras e mentorias, inspirando uma nova geração a enfrentar seus próprios desafios.</p>
     </section>
 
-    <section id="contato" class="card">
-      <h2>Contato e referências</h2>
-      <p class="small">Este blog é um resumo informativo. Para informações oficiais sobre calendário de lançamentos, oficinas e materiais, consulte as editoras e o perfil oficial do autor.</p>
-      <p class="small">Links úteis: perfil do autor em redes sociais, editoras que publicaram suas obras e catálogos de bibliotecas.</p>
+    <section id="valores-legado" tabindex="-1">
+      <h2>Valores & Legado</h2>
+      <p>Formado em [área], André Neves é um defensor da educação crítica, da ética e do engajamento social. Sua escrita reflete um compromisso profundo com a justiça, a inclusão e a valorização da diversidade cultural.</p>
+      <p>Seu legado se manifesta não apenas em suas obras, mas também na influência que exerce sobre leitores, escritores e educadores, contribuindo para a construção de uma literatura que dialoga com os desafios do presente e do futuro.</p>
+      <blockquote>“A literatura é uma ponte entre mundos — e meu papel é ajudar a construir essa ponte todos os dias.”</blockquote>
+    </section>
+
+    <section id="futuro" tabindex="-1">
+      <h2>O Futuro</h2>
+      <p>André Neves segue explorando novas fronteiras literárias e tecnológicas, investindo em formatos digitais, podcasts e projetos interativos que ampliam o alcance da literatura.</p>
+      <p>Entre seus próximos projetos estão [descrição dos projetos], que prometem continuar a impactar a cultura contemporânea e a fomentar diálogos essenciais para a sociedade.</p>
+      <p>Com uma carreira em constante evolução, André permanece uma voz inspiradora e inquieta, sempre em busca de novas formas de contar histórias.</p>
     </section>
   </main>
 
   <footer>
-    <div class="container small">Direitos reservados SELIBI 2025</div>
+    <p>© 2024 André Neves — Todos os direitos reservados</p>
+    <div class="social-links" aria-label="Redes sociais de André Neves">
+      <a href="#" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
+      <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a href="#" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+    </div>
   </footer>
+
+  <script>
+    // Ativar link ativo no menu conforme scroll
+    const sections = document.querySelectorAll('main section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    function activateLink() {
+      let index = sections.length;
+
+      while(--index && window.scrollY + 120 < sections[index].offsetTop) {}
+
+      navLinks.forEach(link => link.classList.remove('active'));
+      navLinks[index].classList.add('active');
+    }
+
+    activateLink();
+    window.addEventListener('scroll', activateLink);
+
+    // Suavizar foco para seções ao clicar no menu (acessibilidade)
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.focus();
+        window.scrollTo({
+          top: targetSection.offsetTop - 70,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
-qqqa
